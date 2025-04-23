@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    background: #f9fafb;
+  }
+  
+  .sidebar {
+    width: 80px;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  
+  .sidebar li {
+    margin: 1.5rem 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .sidebar .active {
+    background-color: #d1f3e3;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .avatar {
+    background: #f87171;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .dashboard {
+    padding: 2rem;
+  }
+  
+  .card-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    width: 200px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  }
+  
