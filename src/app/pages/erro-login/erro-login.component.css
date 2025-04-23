@@ -1,0 +1,80 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+.card {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 580px;
+    position: relative; 
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h1 {
+    color:black;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+a {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-decoration: none;
+}
+
+.button {
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-button {
+    background-color: #238662;
+    color: white;
+    width: 120px;
+    font-size: 19px;
+    border-radius: 15px;
+    padding: 1rem 1rem;
+    margin-top: 10px;
+
+}
+
+.close-button:hover {
+    background-color: #175a41;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
