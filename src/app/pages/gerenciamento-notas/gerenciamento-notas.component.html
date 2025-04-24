@@ -41,7 +41,7 @@
 
             <div class="button-container">
                 <button class="button2" routerLink="/cadastro"> Pesquisar </button>
-                <button class="button" routerLink="/cadastro" ><img src="assets/Share.png"> Cadastrar Aluno </button>
+                <button class="button" routerLink="/cadastro-aluno" ><img src="assets/Share.png"> Cadastrar Aluno </button>
             </div>
           </div>
 
@@ -63,7 +63,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let aluno of alunos ">
+                <tr *ngFor="let aluno of alunos">
                   <td>{{ aluno.nome }}</td>
                   <td>{{ aluno.email }}</td>
                   <td>{{ aluno.ano }}</td>
@@ -84,8 +84,28 @@
           </div>
         </div>
   
+        <div class="pagination-container">
+          <label for="itensPorPagina">Item por página:</label>
+          <select id="itensPorPagina" class="pagination-select" [(ngModel)]="itensPorPagina" (change)="atualizarPagina()">
+            <option *ngFor="let op of [5, 10, 15, 20]" [value]="op">{{ op }}</option>
+          </select>
         
+          <div class="pagination-controls">
+            <button class="pagination-button" (click)="mudarPagina(-1)">&#8249;</button>
+            <button 
+              *ngFor="let pagina of paginas" 
+              [class.active]="pagina === paginaAtual"
+              (click)="mudarPagina(pagina)">
+              {{ pagina }}
+            </button>
+            <span class="pagination-ellipsis">...</span>
+            <button class="pagination-number" (click)="mudarPagina(totalPaginas)">10</button>
+            <button class="pagination-button" (click)="mudarPagina(1)">&#8250;</button>
+          </div>
+        </div>
+
+          
+        </div>
       </div>
-    </div>
   </main>
   
