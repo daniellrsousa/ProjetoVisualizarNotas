@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.editar {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.excluir {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+button {
+    border: none;
+    padding: 0.8rem 1rem;
+    background-color: #FFFFFF;
+    color: black;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-self: flex-start;
+}
+
+button:hover {
+    background-color: #E1FAF0;
+}

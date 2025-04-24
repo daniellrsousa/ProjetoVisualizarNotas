@@ -60,6 +60,9 @@ html, body {
   
   .dashboard {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
   
   .card-container {
@@ -75,7 +78,7 @@ html, body {
     padding: 1rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-style: solid;
-    cursor: text;
+    cursor: pointer;
     transition: 0.2s;
     width: 300px;
     height: 10px;
@@ -83,8 +86,35 @@ html, body {
     font-size: 14px;
     font-weight: 3px;
   }
+
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    margin-left: 25rem;
+    margin-bottom: 0.3rem;
+  }
   
+  .card-pesquisar {
+    background-color: #F5F5F5;
+    padding-left: 2rem;
+    width: 665px;
+    height: 35px;
+    border-radius: 8px;
+    border-color: transparent;
+  }
   
+  .search-icon {
+    position: absolute;
+    left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+  }
+    
   .card:hover {
     background-color: rgb(235, 235, 235);
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -103,9 +133,9 @@ html, body {
     border: none;
     padding: 0.5rem 1rem;
     padding-left: 10px;
-    border-radius: 15px;
+    border-radius: 12px;
     cursor: pointer;
-    width: 140px;
+    width: 162px;
     transition: 0.2s ease-in;
     text-align: center;
     display: flex;
@@ -129,5 +159,92 @@ html, body {
     background-color: #134634;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
   }
+
+  .button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .table-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    overflow-x: auto;
+    margin-top: 1rem;
+  }
   
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #1f2937;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  thead {
+    background-color: #f3f4f6;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  th, td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  tbody tr:hover {
+    background-color: #f9fafb;
+    transition: background 0.2s ease-in-out;
+  }
+
+  .status-badge {
+  background-color: #E1FAF0;
+  color: black;
+  padding: 4px 12px;
+  border-radius: 5px;
+  width: 100px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+td span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.acoes {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-acao {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-acao.editar {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.btn-acao.editar:hover {
+  background-color: #bae6fd;
+}
+
+.btn-acao.excluir {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-acao.excluir:hover {
+  background-color: #fecaca;
+}
+
   

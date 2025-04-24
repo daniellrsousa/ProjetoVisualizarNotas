@@ -65,7 +65,7 @@ html, body {
   .card-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 1rem;
   }
   
@@ -93,17 +93,19 @@ html, body {
 
   .button-container {
     display: flex;
+    justify-content: flex-end;
     gap: 4rem;
-    margin-top: 1rem;
+    margin-top: 3.5rem;
+    margin-left: 1rem;
   }
   
-  .button, .button2 {
+  .button {
     font-family: sans-serif;
     font-weight: bold;
     border: none;
     padding: 0.5rem 1rem;
     padding-left: 10px;
-    border-radius: 15px;
+    border-radius: 12px;
     cursor: pointer;
     width: 140px;
     transition: 0.2s ease-in;
@@ -113,18 +115,17 @@ html, body {
     align-items: center;
     gap: 5px;
   }
+
+  .button img{
+    width: 20px;
+    height: auto;
+  }
   
   .button {
     background: #238662;
     color: white;
   }
   
-  .button2 {
-    background-color: white;
-    color: #238662;
-    width: 130px;
-  }
-
   .button:hover {
     background-color: #134634;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
