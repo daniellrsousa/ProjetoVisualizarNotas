@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { delay } from 'rxjs';	
 
 @Component({
   selector: 'app-erro-aluno',
@@ -17,5 +18,6 @@ export class ErroAlunoComponent {
 
   fechar(): void {
     this.visible = false;
+    delay(1000);
   }
 }
