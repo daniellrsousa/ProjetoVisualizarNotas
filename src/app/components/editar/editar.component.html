@@ -1,0 +1,50 @@
+<main class="main">
+    <body>
+        <div class="card">
+            <div class="card-header">
+                <h2>Editar</h2>
+                <i class="icon-leave"><img src="assets/times.png"></i>
+            </div>
+            <div class="card-body">
+                <div class="formGroup">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" formControlName="nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" formControlName="email">
+                    </div>
+                    <div class="line"></div>
+                    <br>
+                    <div class="form-group">
+                        <label for="year">Ano</label>
+                        <input type="number" id="year" formControlName="year">
+                    </div>
+                    <div class="form-group">
+                        <label for="grade">Série</label>
+                        <input type="text" id="grade" formControlName="grade">
+                    </div>
+                    <div class="line"></div>
+                    <br>
+                    <div class="form-group">
+                        <label for="exatas">Exatas</label> 
+                        <input type="number" id="exatas" formControlName="exatas">
+                    </div>
+                    <div class="form-group">
+                        <label for="linguagens">linguagens</label>
+                        <input type="number" id="linguagens" formControlName="linguagens">
+                    </div>
+                    <div class="form-group">
+                        <label for="ciencias">Ciências</label>
+                        <input type="number" id="ciencias" formControlName="ciencias">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="button" routerLink="/gerenciamento-notas"> Confirmar </button>
+                    <button class="button2" routerLink="/gerenciamento-notas"> Descartar </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</main>

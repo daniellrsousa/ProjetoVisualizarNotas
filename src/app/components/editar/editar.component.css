@@ -1,0 +1,110 @@
+main {
+    margin: 0;
+    padding: 0;
+    background: #44444410;
+    height: 100vh;
+    }
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 20vw;
+    height: 95vh;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+.card-header {
+    display: flex;
+    justify-content: space-around;
+    gap: 15rem;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+.card-header h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+.card-header h2:hover {
+    transition: ease-in 0.3s;
+    color: #238662;
+}
+
+.card-header i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.card-body input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+.card-body label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 2rem;
+  }
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+  }
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+    margin-top: 8.5rem;
+    margin-left: 4rem;
+  }
+  
+  .button, .button2 {
+    font-family: sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 110px;
+    height: 40px;
+    transition: 0.2s ease-in;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button {
+    background-color: #238662;
+    color: #FFFFFF;
+  }
+
+  .button2 {
+    background-color: #FFFFFF;
+    color: #238662;
+  }
+
+
