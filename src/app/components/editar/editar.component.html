@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-header">
                 <h2>Editar</h2>
-                <i class="icon-leave"><img src="assets/times.png"></i>
+                <i class="icon-leave" (click)="fechar()" ><img src="assets/times.png"></i>
             </div>
             <div class="card-body">
                 <div class="formGroup">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="button-container">
                     <button class="button" routerLink="/gerenciamento-notas"> Confirmar </button>
-                    <button class="button2" routerLink="/gerenciamento-notas"> Descartar </button>
+                    <button class="button2" (click)="fechar()"> Descartar </button>
                 </div>
             </div>
         </div>

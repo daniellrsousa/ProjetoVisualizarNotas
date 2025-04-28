@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';	
 
 @Component({
   selector: 'app-editar',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class EditarComponent {
 
+  constructor(private dialog: MatDialog) {}
+  fechar(){
+    this.dialog.closeAll();
+  }
+  
 }

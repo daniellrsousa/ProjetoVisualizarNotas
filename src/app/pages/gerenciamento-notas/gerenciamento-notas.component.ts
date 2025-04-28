@@ -2,6 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { EditarComponent } from '../../components/editar/editar.component';
+import { MatDialog } from '@angular/material/dialog';
+
 
 interface Aluno {
   nome: string;
@@ -17,7 +20,7 @@ interface Aluno {
 
 @Component({
   selector: 'app-gerenciamento-notas',
-  imports: [CommonModule, RouterLink, FormsModule],
+  imports: [CommonModule, RouterLink, FormsModule, EditarComponent],
   templateUrl: './gerenciamento-notas.component.html',
   styleUrls: ['./gerenciamento-notas.component.css']
 })
@@ -86,4 +89,17 @@ export class GerenciamentoNotasComponent implements OnInit {
     const fim = inicio + this.itensPorPagina;
     this.alunosExibidos = this.alunos.slice(inicio, fim);
   }
+
+  constructor(private dialog: MatDialog) {}
+
+  editarAluno() {
+    this.dialog.open(EditarComponent, {
+      width: '400px',
+      height: '1000px'
+    });
+  }
+
 }
+
+
+
