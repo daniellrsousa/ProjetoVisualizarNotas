@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { EditarComponent } from '../../components/editar/editar.component';
+import { AcaoComponent } from '../../components/acao/acao.component';
 import { MatDialog } from '@angular/material/dialog';
 
 interface Aluno {
@@ -15,6 +15,7 @@ interface Aluno {
   ciencias: number;
   humanas: number;
   media: number;
+  status: boolean;
 }
 
 @Component({
@@ -34,7 +35,8 @@ export class GerenciamentoNotasComponent implements OnInit {
       linguagens: 9,
       ciencias: 7,
       humanas: 6,
-      media: 0
+      media: 0,
+      status: false
     },
     {
       nome: 'Maria Souza',
@@ -45,7 +47,20 @@ export class GerenciamentoNotasComponent implements OnInit {
       linguagens: 8,
       ciencias: 10,
       humanas: 7,
-      media: 0
+      media: 0,
+      status: false
+    },
+    {
+      nome: 'Geraldo Ronaldo',
+      email: 'geraldo@exemplo.com',
+      ano: 1,
+      serie: 'G',
+      exatas: 6,
+      linguagens: 5,
+      ciencias: 2,
+      humanas: 5,
+      media: 0,
+      status: false
     },
   ];
 
@@ -58,14 +73,31 @@ export class GerenciamentoNotasComponent implements OnInit {
   ngOnInit() {
     this.alunos.forEach(aluno => {
       aluno.media = this.calcularMedia(aluno);
+      aluno.status = this.ativarStatus(aluno);
     });
     this.calcularPaginas();
     this.exibirAlunos();
   }
 
   calcularMedia(aluno: Aluno): number {
-    return (aluno.exatas + aluno.linguagens + aluno.ciencias + aluno.humanas) / 4;
+    const media = (aluno.exatas + aluno.linguagens + aluno.ciencias + aluno.humanas) / 4;
+    
+    if (media >= 7) {
+      aluno.status = true;
+    } else {
+      aluno.status = false;
+    }
+    
+    return media;
   }
+
+  ativarStatus(aluno: Aluno): boolean {
+    const media = (aluno.exatas + aluno.linguagens + aluno.ciencias + aluno.humanas) / 4;
+    
+    aluno.status = media >= 7;
+  
+    return aluno.status;
+  }  
 
   calcularPaginas() {
     this.totalPaginas = Math.ceil(this.alunos.length / this.itensPorPagina);
@@ -98,11 +130,12 @@ export class GerenciamentoNotasComponent implements OnInit {
 
   constructor(private dialog: MatDialog) {}
 
-  editarAluno() {
-    this.dialog.open(EditarComponent, {
-      position: { right: '0' },
-      width: '400px',
-      height: '1000px'
+  abrirAcoes() {
+    this.dialog.open(AcaoComponent, {
+      position: { right: '5px' }, 
+      width: '30px',             
+      height: 'auto'           
     });
   }
+  
 }

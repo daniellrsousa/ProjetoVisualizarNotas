@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EditarComponent } from '../editar/editar.component';
 
 @Component({
   selector: 'app-acao',
@@ -7,9 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './acao.component.css'
 })
 export class AcaoComponent {
-  acao = {
-    titulo_editar: 'Editar',
-    titulo_excluir: 'Excluir'
-  }
 
+  constructor(private dialog: MatDialog) {}
+
+  editarAluno() {
+    this.dialog.open(EditarComponent, {
+      position: { right: '0' },
+      width: '400px',
+      height: '1000px'
+    });
+  }
 }

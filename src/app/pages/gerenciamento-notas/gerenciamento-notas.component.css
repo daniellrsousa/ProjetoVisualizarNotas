@@ -189,7 +189,7 @@ html, body {
   }
   
   th, td {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1.5rem;
     border-bottom: 1px solid #e5e7eb;
   }
   
@@ -198,15 +198,26 @@ html, body {
     transition: background 0.2s ease-in-out;
   }
 
+  .status-badge, .status-badge-reprovado {
+    color: black;
+    padding: 4px 12px;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
   .status-badge {
-  background-color: #E1FAF0;
-  color: black;
-  padding: 4px 12px;
-  border-radius: 5px;
-  width: 100px;
-  font-size: 12px;
-  font-weight: 300;
-}
+    background-color: #E1FAF0;
+  }
+  
+  .status-badge-reprovado {
+    background-color: #fae1e1;
+  }
+  
 
 td span {
   display: flex;
@@ -219,32 +230,10 @@ td span {
   gap: 0.5rem;
 }
 
-.btn-acao {
-  padding: 5px 10px;
-  border-radius: 8px;
-  border: none;
+.btn_acoes {
+  background-color: transparent;
+  border-color: transparent;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-  transition: 0.2s ease-in-out;
-}
-
-.btn-acao.editar {
-  background-color: #e0f2fe;
-  color: #0369a1;
-}
-
-.btn-acao.editar:hover {
-  background-color: #bae6fd;
-}
-
-.btn-acao.excluir {
-  background-color: #fee2e2;
-  color: #b91c1c;
-}
-
-.btn-acao.excluir:hover {
-  background-color: #fecaca;
 }
 
 .pagination-container {

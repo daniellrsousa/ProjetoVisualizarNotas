@@ -1,9 +1,9 @@
+
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    border-radius: 10px;
-    width: 150px;
+    border-radius: 5px;
+    width: 30px;
 }
 
 .editar {

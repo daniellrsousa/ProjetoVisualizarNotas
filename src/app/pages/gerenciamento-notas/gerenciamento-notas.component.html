@@ -73,10 +73,19 @@
                   <td>{{ aluno.ciencias }}</td>
                   <td>{{ aluno.humanas }}</td>
                   <td>{{ aluno.media }}</td>
-                  <td><span class="status-badge"> <img src="assets/feedback-success.png"> Aprovado</span></td>
+                  <td>
+                    <span [ngClass]="aluno.status ? 'status-badge' : 'status-badge-reprovado'">
+                      <ng-container *ngIf="aluno.status; else reprovado">
+                        <img src="assets/feedback-success.png" alt="Aprovado" width="20"> Aprovado
+                      </ng-container>
+                      <ng-template #reprovado>
+                        <img src="assets/feedback-danger-alt.png" alt="Reprovado" width="20"> Reprovado
+                      </ng-template>
+                    </span>
+                  </td>                  
+                  
                   <td class="acoes">
-                    <button class="btn-acao editar" (click)="editarAluno()">Editar</button>
-                    <button class="btn-acao excluir">Excluir</button>
+                    <button (click)="abrirAcoes()" class="btn_acoes"> <img src="assets/search.png"> </button>
                   </td>                  
                 </tr>
               </tbody>
